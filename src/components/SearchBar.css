@@ -8,6 +8,7 @@
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  background-color: var(--card-background);
 }
 
 .search-input {
@@ -16,6 +17,8 @@
   outline: none;
   font-size: 1rem;
   padding: 8px 0;
+  background-color: transparent;
+  color: var(--text-color);
 }
 
 .search-button {
@@ -28,4 +31,19 @@
 
 .search-button:hover {
   background-color: #f0f0f0;
+}
+
+/* Dark Theme Adjustments */
+[data-theme='dark'] .search-bar {
+  border: 1px solid #303030;
+}
+
+[data-theme='dark'] .search-button {
+  background-color: #212121;
+  border-left: 1px solid #303030;
+  color: #aaa;
+}
+
+[data-theme='dark'] .search-button:hover {
+  background-color: #373737;
 }

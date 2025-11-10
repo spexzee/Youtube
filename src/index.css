@@ -9,16 +9,16 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 8px;
   height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(114, 113, 113);
+  background-color: #606060;
   border-radius: 10px;
   height: 200px;
 }
@@ -45,6 +45,11 @@ a {
   border:none;
   outline:none;
   width:350px;
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 5px 10px;
 }
 
 .category-btn{
@@ -60,8 +65,18 @@ a {
 
   padding: 7px 15px;
   margin: 10px 0px;
-  border-radius: 20px;
+  border-radius: 10px;
   transition: all 0.3s ease;
+  color: var(--text-color);
+}
+
+/* Dark Theme Adjustments */
+[data-theme='dark'] .search-bar {
+  border: 1px solid #303030;
+}
+
+[data-theme='dark'] .category-btn {
+  color: var(--text-color);
 }
 
 @media screen and (max-width: 900px) {

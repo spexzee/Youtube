@@ -38,13 +38,6 @@ const Navbar = ({ toggleSidebar }) => {
         <button className="navbar-icon-btn">
           <i className="fas fa-bell"></i>
         </button>
-        <button className="navbar-profile-btn">
-          <img 
-            src=""
-            alt="profile" 
-            className="navbar-profile-img" 
-          />
-        </button>
       </div>
     </Stack>
   );

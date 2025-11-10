@@ -9,6 +9,11 @@
   height: 326px;
   margin: auto;
   background-color: var(--card-background);
+  transition: transform 0.3s ease;
+}
+
+.channel-card:hover {
+  transform: translateY(-5px);
 }
 
 .channel-card-content {
@@ -25,11 +30,15 @@
   width: 180px;
   margin-bottom: 16px;
   border: 1px solid #e3e3e3;
+  object-fit: cover;
 }
 
 .channel-title {
   font-size: 1.25rem;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .channel-verified-icon {
@@ -42,4 +51,17 @@
   font-size: 15px;
   font-weight: 500;
   color: #606060;
+}
+
+/* Dark Theme Adjustments */
+[data-theme='dark'] .channel-card-media {
+  border: 1px solid #303030;
+}
+
+[data-theme='dark'] .channel-verified-icon {
+  color: #aaa;
+}
+
+[data-theme='dark'] .subscriber-count {
+  color: #aaa;
 }
