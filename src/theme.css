@@ -1,0 +1,24 @@
+/* Light Theme */
+[data-theme='light'] {
+  --background-color: #fff;
+  --text-color: #000;
+  --navbar-background: #fff;
+  --sidebar-background: #fff;
+  --card-background: #f9f9f9;
+  --icon-color: #606060;
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+  --background-color: #0f0f0f;
+  --text-color: #fff;
+  --navbar-background: #212121;
+  --sidebar-background: #212121;
+  --card-background: #181818;
+  --icon-color: #fff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

@@ -1,21 +1,53 @@
-import { Stack ,Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { Stack } from '@mui/material';
+import { logo } from '../utils/constants.jsx';
+import SearchBar from './SearchBar';
+import './Navbar.css';
+import { ThemeContext } from '../contexts/ThemeContext.jsx';
 
-import { logo } from "../utils/constants";
-import { SearchBar } from "./";
+const Navbar = ({ toggleSidebar }) => {
+  const { toggleTheme } = useContext(ThemeContext);
 
-const Navbar = () => (
-  <Stack direction="row" alignItems="center" p={2} sx={{ position:  "sticky", background: '#000', top: 0, justifyContent: "space-between" , zIndex:10 }}>
-    <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-      <div className="logo-name" style={{display:'flex', gap:'10px'}}>
-      <img src={logo} alt="logo" height={45} />
-      <Typography className="logo-name" variant="h4" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-          <span >You Tube</span>
-        </Typography>
+  return (
+    <Stack 
+      direction="row" 
+      alignItems="center" 
+      p={2} 
+      className="navbar-container"
+    >
+      <div className="navbar-left">
+        <button className="navbar-menu-btn" onClick={toggleSidebar}>
+          <i className="fas fa-bars"></i>
+        </button>
+        <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
+          <img src={logo} alt="logo" height={30} />
+        </Link>
       </div>
-    </Link>
-    <SearchBar />
-  </Stack>
-);
+      <SearchBar />
+      <div className="navbar-right">
+        <button className="navbar-icon-btn" onClick={toggleTheme}>
+          <i className="fas fa-adjust"></i>
+        </button>
+        <button className="navbar-icon-btn">
+          <i className="fas fa-video"></i>
+        </button>
+        <button className="navbar-icon-btn">
+          <i className="fas fa-th"></i>
+        </button>
+        <button className="navbar-icon-btn">
+          <i className="fas fa-bell"></i>
+        </button>
+        <button className="navbar-profile-btn">
+          <img 
+            src=""
+            alt="profile" 
+            className="navbar-profile-img" 
+          />
+        </button>
+      </div>
+    </Stack>
+  );
+};
 
 export default Navbar;

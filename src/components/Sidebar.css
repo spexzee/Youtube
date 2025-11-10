@@ -1,0 +1,22 @@
+.sidebar {
+  transition: width 0.3s;
+  background-color: var(--sidebar-background);
+}
+
+.sidebar.open {
+  width: 240px;
+}
+
+.category-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: var(--text-color);
+}
+
+.category-btn:hover {
+  background-color: #f0f0f0;
+}

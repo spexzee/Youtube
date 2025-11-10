@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { Videos } from "./";
+import "./SearchFeed.css";
 
 const SearchFeed = () => {
   const [videos, setVideos] = useState(null);
@@ -15,8 +16,8 @@ const SearchFeed = () => {
   }, [searchTerm]);
 
   return (
-    <Box p={2} minHeight="95vh">
-      <Typography variant="h4" fontWeight={900}  color="white" mb={3} ml={{ sm: "100px"}}>
+    <Box p={2} minHeight="95vh" className="search-feed-container">
+      <Typography variant="h4" fontWeight={900}  color="#000" mb={3} ml={{ sm: "100px"}}>
         Search Results for <span style={{ color: "#FC1503" }}>{searchTerm}</span> videos
       </Typography>
       <Box display="flex">

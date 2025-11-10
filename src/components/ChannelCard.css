@@ -1,0 +1,45 @@
+.channel-card {
+  box-shadow: none;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 320px;
+  height: 326px;
+  margin: auto;
+  background-color: var(--card-background);
+}
+
+.channel-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.channel-card-media {
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+  margin-bottom: 16px;
+  border: 1px solid #e3e3e3;
+}
+
+.channel-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.channel-verified-icon {
+  font-size: 14px;
+  color: #606060;
+  margin-left: 5px;
+}
+
+.subscriber-count {
+  font-size: 15px;
+  font-weight: 500;
+  color: #606060;
+}

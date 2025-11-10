@@ -1,0 +1,8 @@
+.video-detail-container {
+  background-color: var(--background-color);
+}
+
+.react-player {
+  width: 100% !important;
+  height: auto !important;
+}
