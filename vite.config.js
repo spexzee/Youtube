@@ -10,5 +10,15 @@ export default defineConfig({
   },
   resolve: {
     extensions: ['.js', '.jsx']
-  }
+  },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
+  },
+  base: '/'
 })
